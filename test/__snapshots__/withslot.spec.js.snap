@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withSlot when the component has a main slot and children is passed should show children content 1`] = `
+"<div>
+    <slot>
+        <h1>Child element</h1>
+    </slot>
+</div>"
+`;
+
+exports[`withSlot when the component has a main slot and no children is passed should show default content 1`] = `
+"<div>
+    <slot>Default content</slot>
+</div>"
+`;
+
+exports[`withSlot when the component has no slot children is ignored 1`] = `
+"<div>
+    <div>No slot</div>
+</div>"
+`;
