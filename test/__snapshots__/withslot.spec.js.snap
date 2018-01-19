@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`when nesting components the children passed to parent component should not propagate into nested component 1`] = `
+"<div>
+    <slot>
+        <h1>Passed element</h1>
+    </slot>
+    <div>
+        <slot>Default child content</slot>
+    </div>
+</div>"
+`;
+
 exports[`when the component has a main slot and children is passed should show children content 1`] = `
 "<div>
     <slot>
@@ -29,9 +40,44 @@ exports[`when the component has a named slot and children without matching slot 
 </div>"
 `;
 
+exports[`when the component has a named slot and more than one child with matching slot prop is passed should show children elements in correspondent slot element 1`] = `
+"<div>
+    <slot name=\\"myslot\\">
+        <h1 slot=\\"myslot\\">Child element</h1>
+        <div slot=\\"myslot\\">Second child element</div>
+    </slot>
+</div>"
+`;
+
 exports[`when the component has a named slot and no children is passed should show default content 1`] = `
 "<div>
     <slot name=\\"myslot\\">Default Content</slot>
+</div>"
+`;
+
+exports[`when the component has nested slots and a child with matching child slot prop is passed should show child element in child slot element 1`] = `
+"<div>
+    <slot name=\\"parentslot\\">
+        <slot name=\\"childslot\\">
+            <h1 slot=\\"childslot\\">Child element</h1>
+        </slot>
+    </slot>
+</div>"
+`;
+
+exports[`when the component has nested slots and a child with matching parent slot prop is passed should show child element in parent slot element 1`] = `
+"<div>
+    <slot name=\\"parentslot\\">
+        <h1 slot=\\"parentslot\\">Child element</h1>
+    </slot>
+</div>"
+`;
+
+exports[`when the component has nested slots and no children is passed should show default content 1`] = `
+"<div>
+    <slot name=\\"parentslot\\">
+        <slot name=\\"childslot\\">Default nested content</slot>
+    </slot>
 </div>"
 `;
 

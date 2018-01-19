@@ -11,7 +11,7 @@ function buildSlotMap (vnode, map) {
           index: i
         }
       }
-      buildSlotMap(child, map)
+      if (!child.data.slotRoot) buildSlotMap(child, map)
     }
   }
 }
@@ -50,6 +50,7 @@ export const withSlot = (renderFn) => {
   return function (props, children) {
     const containerTree = renderFn(props, children)
     const slotMap = Object.create(null)
+    containerTree.data.slotRoot = true
     if (containerTree.sel === 'slot') {
       slotMap[getSlotName(containerTree)] = {
         node: containerTree
