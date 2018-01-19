@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "snabbdom-slot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A shadowDom slot system like for snabbdom stateless components",
   "repository": "blikblum/snabbdom-slot",
   "author": "Luiz Américo Pereira Câmara",
