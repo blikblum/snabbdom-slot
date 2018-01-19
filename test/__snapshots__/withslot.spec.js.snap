@@ -1,20 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withSlot when the component has a main slot and children is passed should show children content 1`] = `
+exports[`when the component has a main slot and children is passed should show children content 1`] = `
 "<div>
     <slot>
         <h1>Child element</h1>
+        <div>Other child element</div>
     </slot>
 </div>"
 `;
 
-exports[`withSlot when the component has a main slot and no children is passed should show default content 1`] = `
+exports[`when the component has a main slot and no children is passed should show default content 1`] = `
 "<div>
     <slot>Default content</slot>
 </div>"
 `;
 
-exports[`withSlot when the component has no slot children is ignored 1`] = `
+exports[`when the component has a named slot and a child with matching slot prop is passed should show child element in correspondent slot element 1`] = `
+"<div>
+    <slot name=\\"myslot\\">
+        <h1 slot=\\"myslot\\">Child element</h1>
+    </slot>
+</div>"
+`;
+
+exports[`when the component has a named slot and children without matching slot prop is passed should show default content 1`] = `
+"<div>
+    <slot name=\\"myslot\\">Default Content</slot>
+</div>"
+`;
+
+exports[`when the component has a named slot and no children is passed should show default content 1`] = `
+"<div>
+    <slot name=\\"myslot\\">Default Content</slot>
+</div>"
+`;
+
+exports[`when the component has no slot children is ignored 1`] = `
 "<div>
     <div>No slot</div>
 </div>"
