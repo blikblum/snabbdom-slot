@@ -25,7 +25,7 @@ promise = promise.then(() => del(['dist/*']));
     file: `dist/${format === 'umd' ? 'index' : 'index.esm'}.js`,
     format,
     sourcemap: true,
-    name: format === 'umd' ? pkg.name : undefined
+    name: format === 'umd' ? 'snabbdomSlot' : undefined
   })))
 })
 
