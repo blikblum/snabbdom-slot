@@ -1,14 +1,14 @@
 # snabbdom-slot
 
-[![NPM version](http://img.shields.io/npm/v/generator-javascript.svg?style=flat-square)](https://www.npmjs.com/package/snabbdom-slot)
-[![NPM downloads](http://img.shields.io/npm/dm/generator-javascript.svg?style=flat-square)](https://www.npmjs.com/package/snabbdom-slot)
+[![NPM version](http://img.shields.io/npm/v/snabbdom-slot.svg?style=flat-square)](https://www.npmjs.com/package/snabbdom-slot)
+[![NPM downloads](http://img.shields.io/npm/dm/snabbdom-slot.svg?style=flat-square)](https://www.npmjs.com/package/snabbdom-slot)
 
-> shadowDom slot system like for snabbdom stateless components
+> slot system for snabbdom stateless components based on Shadow DOM API
 
 
 ### Features
 
-  &nbsp; &nbsp; ✓ slot system based on web component / [shadowDOM spec](https://developers.google.com/web/fundamentals/web-components/shadowdom)<br>
+  &nbsp; &nbsp; ✓ slot system based on web component / [Shadow DOM spec](https://developers.google.com/web/fundamentals/web-components/shadowdom)<br>
   &nbsp; &nbsp; ✓ works with JSX or hyperscript<br>
 
 
